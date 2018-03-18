@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Incore</groupId>
+  <artifactId>Incore</artifactId>
+  <version>1.0.0</version>
+  
+	<repositories>
+		<!-- Spigot API -->
+		<repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+	</repositories>
+		
+	<dependencies>
+    <dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.12-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+    </dependency>
+    
+    <!-- For the Nullable annotation -->
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+  <build>
+		<finalName>Incore_v${project.version}</finalName>
+    <sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>plugin.yml</include>
+					<include>config.yml</include>
+				</includes>
+			</resource>
+      <resource>
+				<directory>resources/modules/</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>**/*.yml</include>
+				</includes>
+			</resource>
+		</resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

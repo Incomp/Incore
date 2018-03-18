@@ -1,0 +1,31 @@
+# Welcome to the configuration file for Item Ban, a module included within Incore.
+# Configuration is pretty easy.
+general:
+    # Should the module be enabled?
+    enable: true
+    
+    # What should I tell players when they try to use a banned item?
+    itemBanMessage: "&4That item can't be used."
+    
+    # Should I take the item from the player's inventory when they try to use it?
+    removeFromInventory: true
+    
+# What items should not be permitted for use?
+#
+# When an item is on this list, its crafting recipes -- if it has any -- will be removed. Additionally, attempts to use said
+# item will be denied.
+#
+# To add an item to this list, just use the same 'MATERIAL_NAME:DURABILITY' formatting seen in the presets.
+# For all materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+bannedItems:
+    - 'SHIELD:-1'
+
+# Sometimes, it may be important to ban certain potion effects. In light of that possibility, I've created a section just for
+# that. You can specific the potion effect type as well as its amplifier value. If you use an amplifier of 0, the entire effect
+# will be banned. For example, adding 'INCREASE_DAMAGE:2' will only ban Strength II and above. Strength I will still be fine.
+# However, adding 'INCREASE_DAMAGE:0' will ban Strength altogether.
+#
+# For all potion effects: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+bannedPotionEffects:
+    - 'INCREASE_DAMAGE:2'
+    - 'LEVITATION:0'

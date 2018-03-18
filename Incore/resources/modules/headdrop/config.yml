@@ -1,0 +1,20 @@
+# Welcome to the configuration file for Head Drop, a module included within Incore.
+# Configuration is pretty easy.
+general:
+    # Should the module be enabled?
+    enable: true
+    
+    # This determines the drop chance of player heads. Use a FLOAT value for this.
+    #
+    # 0.1 is 10%, 0.2 is 20%, and so forth, until 1.0, which is 100%. If you go over 1.0, the plugin will just assume 1.0.
+    # Likewise, if you use a negative drop chance, the plugin will just assume 0.
+    #
+    # Default value is 0.15.
+    dropChance: 0.15
+    
+    # This determines when player heads drop. It is common to only have player heads drop if the player is killed by another
+    # player, but you might be in a scenario where you want heads being able to drop with every death. In that case, you have
+    # this option.
+    #
+    # Defaults to true.
+    combatOnly: true

@@ -1,0 +1,20 @@
+name: Incore
+author: [Incomp]
+description: "A plugin plugin. Seriously."
+
+version: ${project.version}
+main: me.incomp.plugins.pub.incore.Incore
+
+commands:
+    incore:
+        aliases: []
+        description: "Base command for Incore."
+    module:
+        aliases: [modules]
+        description: "Base command for Incore's modules."
+    headdrop:
+        aliases: [headdrops]
+        description: "Base command for the Head Drop module."
+    itemban:
+        aliases: [banitem]
+        description: "Base command for the Item Ban module."

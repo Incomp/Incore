@@ -1,0 +1,4 @@
+# Welcome to the main configuration file for Incore.
+# In an ironic way, the main configuration file is probably going to be the smallest in my plugin.
+debug:
+    messages: false
