@@ -91,6 +91,9 @@ public class ItemBanListener implements Listener {
 	public void onPrepareItemCraft(PrepareItemCraftEvent event) {
 		Recipe r = event.getRecipe();
 		ItemStack result = r.getResult();
+		
+		if(result == null) return; // Better safe than pregnant.
+		
 		Material mat = result.getType();
 		
 		if(this.module.getItemBlacklist().containsKey(mat)) {
