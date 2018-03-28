@@ -30,6 +30,13 @@ public abstract class Module {
     private boolean enabled = false;
     private boolean configLoaded = false;
 
+    /**
+     * Initializes a module.
+     * 
+     * @param plugin			- Parent plugin
+     * @param moduleName		- Name of the new module
+     * @param description		- Short description, similar to "Implements <xyz>"
+     */
     public Module(IPlugin plugin, String moduleName, String description) {
         this.plugin = plugin;
         this.name = moduleName;

@@ -1,0 +1,27 @@
+# Welcome to the configuration file for Pay2Cmd, a module included within Incore.
+#
+# Pay2Cmd allows you to assign an economic cost to running any command you want.
+general:
+    # Should the module be enabled?
+    enable: true
+    
+    # Should I require player confirmation to run a command?
+    confirm: true
+    
+    # How many seconds should I wait before timing out the confirmation? Requires "general.confirm" to be true.
+    confirm-timeout: 15
+    
+    # How should I handle confirmation? Requires "general.confirm" to be true.
+    # You have three choices here:
+    # - GUI: A GUI will come up and prompt the player to click yes or no.
+    # - CHAT: The player will have to type "/yes" or "/no" to confirm.
+    # - SAME_CMD: The player will have to run the command again to confirm. If they run a different command, confirmation will
+    #             be cancelled.
+    confirm-method: "GUI"
+
+# Command configuration is pretty simple. You just indent the command you want and give the price.
+commands:
+    spawn: 10
+    espawn: 10
+    sethome: 10
+    esethome: 10

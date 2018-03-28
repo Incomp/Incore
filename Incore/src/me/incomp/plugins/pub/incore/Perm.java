@@ -10,39 +10,25 @@ import org.bukkit.permissions.Permissible;
  */
 public enum Perm {
 	
-	// General permissions.
-	RELOAD("reload", "Required to reload the plugin."),
-	PERMS("perms", "Required to view your own permissions."),
-	PERMS_OTHERS("perms.others", "Required to view others' permissions."),
+	RELOAD("incore.reload", "Required to reload the plugin."),
+	PERMS("incore.perms", "Required to view your own permissions to Incore."),
+	PERMS_OTHERS("incore.perms.others", "Required to view others' permissions to Incore."),
+	MODULES_LIST("incore.modules", "Required to list all modules."),
+	MODULES_MANAGE("incore.modules.manage", "Required to enable, disable, and reload modules."),
 	
-	// Head Drop module permissions.
-	MODULE_HEADDROP_RELOAD("module.headdrop.reload", "Required to reload the Head Drop module."),
+	MODULE_HEADDROP_RELOAD("incore.module.headdrop.reload", "Required to reload the Head Drop module."),
 	
-	// Item Ban module permissions.
-	MODULE_ITEMBAN_RELOAD("module.itemban.reload", "Required to reload the Item Ban module."),
-	MODULE_ITEMBAN_BYPASS("module.itemban.bypass", "Required to bypass item bans."),
+	MODULE_ITEMBAN_RELOAD("incore.module.itemban.reload", "Required to reload the Item Ban module."),
+	MODULE_ITEMBAN_BYPASS("incore.module.itemban.bypass", "Required to bypass Item Ban's restrictions."),
 	
-	// General module permissions.
-	MODULES_LIST("modules.list", "Required to list modules."),
-	MODULES_MANAGE("modules.manage", "Required to enable, disable, and reload modules.");
-	
-	private final String key;
+	MODULE_PAY2CMD_BYPASS("incore.module.pay2cmd.bypass", "Required to bypass Pay2Cmd command costs.");
+		
 	private final String node;
 	private final String desc;
 	
-	private Perm(String key, String desc) {
-		this.key = key;
-		this.node = "incore." + key;
+	private Perm(String node, String desc) {
+		this.node = node;
 		this.desc = desc;
-	}
-	
-	/**
-	 * Used to get the key of the permission node. This shouldn't ever really be used.
-	 * 
-	 * @return String
-	 */
-	public String getKey() {
-		return this.key;
 	}
 	
 	/**

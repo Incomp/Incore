@@ -63,7 +63,5 @@ public class HeadDropModule extends Module {
 		this.removeListeners();
 		this.info("Done.");
 		this.info(" === INCORE MODULE: " + this.getName() + " === ");
-		// TODO Auto-generated method stub
-		
 	}
 }
