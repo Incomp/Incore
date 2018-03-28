@@ -12,9 +12,3 @@ commands:
     module:
         aliases: [modules]
         description: "Base command for Incore's modules."
-    headdrop:
-        aliases: [headdrops]
-        description: "Base command for the Head Drop module."
-    itemban:
-        aliases: [banitem]
-        description: "Base command for the Item Ban module."

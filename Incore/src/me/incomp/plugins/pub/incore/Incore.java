@@ -2,8 +2,6 @@ package me.incomp.plugins.pub.incore;
 
 import me.incomp.plugins.pub.incore.CmdIncore.CmdIncoreParent;
 import me.incomp.plugins.pub.incore.CmdModule.CmdModuleParent;
-import me.incomp.plugins.pub.incore.modules.headdrop.HeadDropModule;
-import me.incomp.plugins.pub.incore.modules.itemban.ItemBanModule;
 
 public class Incore extends IPlugin {
 	
@@ -25,8 +23,6 @@ public class Incore extends IPlugin {
 		
 		this.info("Adding modules...");
 		// DEV: Add more modules here as you see fit.
-		this.addModule(new HeadDropModule(this));
-		this.addModule(new ItemBanModule(this));
 		this.info("Done.");
 		
 		this.info(" === INCORE === ");
