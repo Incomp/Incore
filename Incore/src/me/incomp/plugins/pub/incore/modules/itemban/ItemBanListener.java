@@ -90,8 +90,9 @@ public class ItemBanListener implements Listener {
 	@EventHandler
 	public void onPrepareItemCraft(PrepareItemCraftEvent event) {
 		Recipe r = event.getRecipe();
-		ItemStack result = r.getResult();
+		if(r == null) return; // Better safe than pregante.
 		
+		ItemStack result = r.getResult();
 		if(result == null) return; // Better safe than pregnant.
 		
 		Material mat = result.getType();
